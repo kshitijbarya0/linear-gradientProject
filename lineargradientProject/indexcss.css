@@ -1,0 +1,42 @@
+body{
+    background-image: linear-gradient(to right, #855585,#fff8ff);
+}
+.container{
+    padding: 20px;
+    margin-top: 15rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+    box-shadow: 1px 2px 20px 3px;
+    border-radius: 50px;
+}
+#btn1{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: orange;
+    box-shadow: 1px 1px 10px 1px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-left: 8rem;
+    
+}
+#btn2{
+    background: lightcoral;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px;
+    margin-left: 20px;
+
+}
+.copy-container{
+    padding: 30px;
+    background: #cdcdcd;
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px 1px;
+}
+p{
+    background: #cdcdcd;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+}

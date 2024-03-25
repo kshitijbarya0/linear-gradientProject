@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greadient-Color-Project</title>
+    <link rel="stylesheet" href="indexcss.css">
+</head>
+<body>
+    <div class="container">
+            <button id="btn1">#sdf822</button>
+            <button id="btn2">#225ad2</button>
+            <h4>Click to copy the code</h4>
+        <div class="copy-container">
+             background-image: linear-gradient(to right, #855585,#fff8ff);
+        </div>
+    </div>
+
+    <script>
+        let Btn1data = document.getElementById("btn1");
+        let Btn2data = document.getElementById("btn2");
+        let Copydata = document.querySelector(".copy-container");
+        let rbgcolor1 = "#ff125f"
+        let rbgcolor2 = "#abc124"
+
+        const haxcolor = () =>{
+            let color_code = "0123456789abcdef"
+            let color = "#"
+            for(let i = 0; i<6; i++){
+                 color+=color_code[Math.floor(Math.random(i)*16)];
+            }
+            return color;
+        }
+        const handelbtn1 = () =>{
+          rbgcolor1 = haxcolor();
+          document.body.style.backgroundImage = `linear-gradient(to right , ${rbgcolor1},${rbgcolor2})`;
+          Copydata.innerHTML = `background-image: linear-gradient(to right, ${rbgcolor1},${rbgcolor2})`;
+          Btn1data.innerHTML = `${rbgcolor1}`;
+
+        }
+        const handelbtn2 = () =>{
+          rbgcolor2 = haxcolor();
+          document.body.style.backgroundImage = `linear-gradient(to right , ${rbgcolor1},${rbgcolor2})`;
+          Copydata.innerHTML = `background-image: linear-gradient(to right, ${rbgcolor1},${rbgcolor2})`;
+          Btn2data.innerHTML = `${rbgcolor2}`;
+        }
+
+        Btn1data.addEventListener('click', handelbtn1);
+        Btn2data.addEventListener('click', handelbtn2);
+        // to copy the text in the div
+        Copydata.addEventListener('click',() => {
+            navigator.clipboard.writeText(Copydata.innerText);
+        });
+        Copydata.addEventListener('click', () => {
+            alert("Text Copied");
+        });
+    </script>
+    
+</body>
+</html>
